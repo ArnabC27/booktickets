@@ -18,6 +18,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Good Morning"
+                    ),
+                    Container(
+
                     )
                   ],
                 )
