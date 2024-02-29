@@ -19,7 +19,17 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "Good Morning"
                     ),
-                    Image.asset("assets/images/img_1.png"),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/images/img_1.png"),
+                        )
+                      ),
+                    ),
                   ],
                 )
               ],
