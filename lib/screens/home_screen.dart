@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("This is Home Screen"),
+      child: Text("Home Screen"),
     );
   }
 }
