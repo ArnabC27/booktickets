@@ -19,9 +19,7 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "Good Morning"
                     ),
-                    Container(
-
-                    )
+                    Image.asset("assets/images/img_1.png"),
                   ],
                 )
               ],
