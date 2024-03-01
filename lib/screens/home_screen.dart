@@ -12,12 +12,14 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                             "Good Morning"
