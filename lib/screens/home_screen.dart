@@ -16,18 +16,21 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Good Morning"
+                    ),
+                    const Text(
+                        "Book Tickets"
                     ),
                     Container(
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
+                        image: const DecorationImage(
+                          fit: BoxFit.fitHeight,
                           image: AssetImage("assets/images/img_1.png"),
-                        )
+                        ),
                       ),
                     ),
                   ],
