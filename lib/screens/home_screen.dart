@@ -1,3 +1,4 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -46,6 +47,16 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ],
+                ),
+                const Gap(25),
+                Row(
+                  children: [
+                    const Icon(FluentSystemIcons.ic_fluent_search_regular, color: Color(0xFFBFC205),),
+                    Text(
+                      "Search",
+                      style: Styles.headLineStyle4,
+                    )
                   ],
                 )
               ],
