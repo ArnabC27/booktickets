@@ -1,4 +1,5 @@
 import 'package:booktickets/utils/app_layout.dart';
+import 'package:booktickets/widgets/thick_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,9 @@ class TicketView extends StatelessWidget {
                           "NYC",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
                       ),
+                      const Spacer(),
+                      ThickContainer(),
+                      ThickContainer(),
                       const Spacer(),
                       Text("LDN",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
