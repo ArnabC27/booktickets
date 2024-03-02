@@ -45,7 +45,17 @@ class HotelView extends StatelessWidget {
           Text(
             "Open Space",
             style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
-          )
+          ),
+          const Gap(5),
+          Text(
+            "Bengaluru",
+            style: Styles.headLineStyle3.copyWith(color: Colors.white),
+          ),
+          const Gap(8),
+          Text(
+            "\u{20B9}${3000}",
+            style: Styles.headLineStyle1.copyWith(color: Styles.kakiColor),
+          ),
         ],
       ),
     );
