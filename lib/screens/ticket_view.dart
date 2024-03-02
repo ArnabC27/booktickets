@@ -35,10 +35,24 @@ class TicketView extends StatelessWidget {
                           "NYC",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
                       ),
-                      const Spacer(),
+                      Expanded(child: Container()),
                       ThickContainer(),
+                      Expanded(child: SizedBox(
+                        height: 24,
+                        child: LayoutBuilder(
+                          builder: (BuildContext context, BoxConstraints constraints) {
+                            return Flex(
+                              direction: Axis.horizontal,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: List.generate(5, (index) => Text(
+                                "-"
+                              )),
+                            );
+                          },
+                        ),
+                      )),
                       ThickContainer(),
-                      const Spacer(),
+                      Expanded(child: Container()),
                       Text("LDN",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
                       ),
