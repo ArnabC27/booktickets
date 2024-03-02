@@ -1,3 +1,4 @@
+import 'package:booktickets/screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -82,7 +83,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          TicketView()
         ],
       ),
     );
