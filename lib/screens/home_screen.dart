@@ -1,3 +1,4 @@
+import 'package:booktickets/screens/hotel_view.dart';
 import 'package:booktickets/screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
@@ -108,6 +109,17 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: Text("View All", style: Styles.textStyle.copyWith(color: Styles.primaryColor),),
                 ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                HotelView(),
+                HotelView(),
               ],
             ),
           ),

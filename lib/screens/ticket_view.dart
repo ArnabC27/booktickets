@@ -35,7 +35,7 @@ class TicketView extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                          "NYC",
+                          "CCU",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
                       ),
 
@@ -80,7 +80,7 @@ class TicketView extends StatelessWidget {
 
                       Expanded(child: Container()),
 
-                      Text("LDN",
+                      Text("BLR",
                           style: Styles.headLineStyle3.copyWith(color: Colors.white),
                       ),
                     ],
@@ -91,12 +91,12 @@ class TicketView extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 100,
-                        child: Text("New-York", style: Styles.headLineStyle4.copyWith(color: Colors.white),),
+                        child: Text("Kolkata", style: Styles.headLineStyle4.copyWith(color: Colors.white),),
                       ),
-                      Text("8H 30M", style: Styles.headLineStyle4.copyWith(color: Colors.white)),
+                      Text("2H 40M", style: Styles.headLineStyle4.copyWith(color: Colors.white)),
                       SizedBox(
                         width: 100,
-                        child: Text("London", textAlign: TextAlign.end, style: Styles.headLineStyle4.copyWith(color: Colors.white),),
+                        child: Text("Bengaluru", textAlign: TextAlign.end, style: Styles.headLineStyle4.copyWith(color: Colors.white),),
                       ),
                     ],
                   )
