@@ -1,5 +1,6 @@
 import 'package:booktickets/screens/hotel_view.dart';
 import 'package:booktickets/screens/ticket_view.dart';
+import 'package:booktickets/utils/app_info_list.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -113,14 +114,11 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Gap(15),
-          const SingleChildScrollView(
+          SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: Row(
-              children: [
-                HotelView(),
-                HotelView(),
-              ],
+              children: hotelList.map((singleHotel) => HotelView(hotel: singleHotel)).toList(),
             ),
           ),
         ],

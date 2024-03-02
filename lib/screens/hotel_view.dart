@@ -6,7 +6,8 @@ import 'package:gap/gap.dart';
 import '../utils/app_styles.dart';
 
 class HotelView extends StatelessWidget {
-  const HotelView({Key? key}): super(key: key);
+  final Map<String, dynamic> hotel;
+  const HotelView({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
@@ -35,25 +36,25 @@ class HotelView extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,
-              image: const DecorationImage(
+              image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/images/one.png"),
+                image: AssetImage("assets/images/${hotel['image']}"),
               )
             ),
           ),
           const Gap(10),
           Text(
-            "Open Space",
+            "${hotel['place']}",
             style: Styles.headLineStyle2.copyWith(color: Styles.kakiColor),
           ),
           const Gap(5),
           Text(
-            "Bengaluru",
+            "${hotel['destination']}",
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
           ),
           const Gap(8),
           Text(
-            "\u{20B9}${3000}",
+            "\u{20B9}${hotel['price']}",
             style: Styles.headLineStyle1.copyWith(color: Styles.kakiColor),
           ),
         ],
