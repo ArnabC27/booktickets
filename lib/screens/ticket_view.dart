@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
-
 import '../utils/app_styles.dart';
 
 class TicketView extends StatelessWidget {
@@ -16,7 +15,7 @@ class TicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width * 0.85,
-      height: 200,
+      height: AppLayout.getHeight(200),
       child: Container(
         margin: const EdgeInsets.only(right: 16),
         child: Column(
@@ -71,7 +70,7 @@ class TicketView extends StatelessWidget {
                           Center(
                             child: Transform.rotate(
                               angle: 1.5,
-                              child: Icon(Icons.local_airport_rounded, color: Colors.white),
+                              child: const Icon(Icons.local_airport_rounded, color: Colors.white),
                             ),
                           ),
                         ],
