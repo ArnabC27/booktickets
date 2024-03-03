@@ -8,6 +8,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: ListView(
@@ -17,11 +18,21 @@ class SearchScreen extends StatelessWidget {
           Text("What are\nyou looking for?", style: Styles.headLineStyle1.copyWith(fontSize: 35),),
           const Gap(20),
           Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              color: const Color(0xFFF4F6FD),
+            child: Row(
+              children: [
+                Container(
+                  width: size.width * 0.44,
+                  padding: const EdgeInsets.symmetric(vertical: 7),
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.horizontal(left: Radius.circular(50), ),
+                    color: Colors.white,
+                  ),
+                  child: const Center(
+                      child: Text("Airline Tickets",)
+                  ),
+                )
+              ],
             ),
-            child: const Text("Hi"),
           )
         ],
       ),
