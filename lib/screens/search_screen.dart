@@ -1,5 +1,6 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:booktickets/widgets/double_text_widget.dart';
 import 'package:booktickets/widgets/icon_text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -52,11 +53,11 @@ class SearchScreen extends StatelessWidget {
           ),
           const Gap(25),
           const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departures"),
-          const Gap(15),
+          const Gap(20),
           const AppIconText(icon: Icons.flight_land_rounded, text: "Arrivals"),
-          const Gap(15),
+          const Gap(25),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 18),
             decoration: BoxDecoration(
               color: const Color(0xD91130CE),
               borderRadius: BorderRadius.circular(10),
@@ -69,7 +70,8 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           const Gap(40),
-          Text("Upcoming Flights", style: Styles.textStyle.copyWith(fontSize: 22),),
+          const AppDoubleTextWidget(bigText: "Upcoming Flights", smallText: "View All"),
+
         ],
       ),
     );
