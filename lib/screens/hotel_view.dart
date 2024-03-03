@@ -7,7 +7,7 @@ import '../utils/app_styles.dart';
 
 class HotelView extends StatelessWidget {
   final Map<String, dynamic> hotel;
-  const HotelView({super.key, required this.hotel});
+  const HotelView({Key? key, required this.hotel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
