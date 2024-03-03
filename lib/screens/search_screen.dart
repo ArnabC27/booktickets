@@ -16,7 +16,13 @@ class SearchScreen extends StatelessWidget {
           const Gap(40),
           Text("What are\nyou looking for?", style: Styles.headLineStyle1.copyWith(fontSize: 35),),
           const Gap(20),
-
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: const Color(0xFFF4F6FD),
+            ),
+            child: const Text("Hi"),
+          )
         ],
       ),
     );
