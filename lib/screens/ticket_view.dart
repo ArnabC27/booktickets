@@ -17,16 +17,16 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: AppLayout.getHeight(200),
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              decoration: const BoxDecoration(
-                color: Color(0xFF526799),
+              decoration: BoxDecoration(
+                color: const Color(0xFF526799),
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(21),
-                  topRight: Radius.circular(21),
+                  topLeft: Radius.circular(AppLayout.getHeight(21)),
+                  topRight: Radius.circular(AppLayout.getHeight(21)),
                 ),
               ),
               padding: const EdgeInsets.all(16),
