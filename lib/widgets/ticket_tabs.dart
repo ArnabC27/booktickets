@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import '../utils/app_layout.dart';
 
 class AppTicketTabs extends StatelessWidget {
-  const AppTicketTabs({super.key});
+  final String firstTab;
+  final String secondTab;
+  const AppTicketTabs({Key? key, required this.firstTab, required this.secondTab}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

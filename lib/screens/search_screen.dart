@@ -2,6 +2,7 @@ import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
 import 'package:booktickets/widgets/double_text_widget.dart';
 import 'package:booktickets/widgets/icon_text_widget.dart';
+import 'package:booktickets/widgets/ticket_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -20,37 +21,7 @@ class SearchScreen extends StatelessWidget {
           const Gap(40),
           Text("What are\nyou looking for?", style: Styles.headLineStyle1.copyWith(fontSize: 35),),
           const Gap(20),
-          FittedBox(
-            child: Container(
-              padding: const EdgeInsets.all(3.5),
-              child: Row(
-                children: [
-                  Container(
-                    width: size.width * 0.44,
-                    padding: const EdgeInsets.symmetric(vertical: 7),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(left: Radius.circular(50),),
-                      color: Colors.white,
-                    ),
-                    child: const Center(
-                        child: Text("Airline Tickets",)
-                    ),
-                  ),
-                  Container(
-                    width: size.width * 0.44,
-                    padding: const EdgeInsets.symmetric(vertical: 7),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(right: Radius.circular(50),),
-                      color: Colors.transparent,
-                    ),
-                    child: const Center(
-                        child: Text("Hotels",)
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+          AppTicketTabs(),
           const Gap(25),
           const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departures"),
           const Gap(20),
