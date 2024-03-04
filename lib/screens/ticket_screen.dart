@@ -29,7 +29,32 @@ class TicketScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 15),
                 child: TicketView(ticket: ticketList[0], isColor: true,),
-              )
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 15.5),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "Arnab C.",
+                              style: Styles.headLineStyle3,
+                            ),
+                            Text(
+                              "Passenger",
+                              style: Styles.headLineStyle3,
+                            ),
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                )
+              ),
             ],
           )
         ],
