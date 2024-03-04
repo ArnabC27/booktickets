@@ -112,25 +112,60 @@ class SearchScreen extends StatelessWidget {
               ),
               Column(
                 children: [
+                  Stack(
+                    children: [
+                      Container(
+                        width: size.width * 0.44,
+                        height: 205,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF3AB8B8),
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Discount\nfor survey",
+                              style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+                            ),
+                            const Gap(10),
+                            Text(
+                              "Take the survey about our services and get discount",
+                              style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                          right: -45,
+                          top: -40,
+                          child: Container(
+                          padding: const EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 18, color: const Color(0xFF189999)),
+                            color: Colors.transparent,
+                          )
+                      ),
+                      )
+                    ],
+                  ),
+                  const Gap(15),
                   Container(
                     width: size.width * 0.44,
-                    height: 205,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF3AB8B8),
-                      borderRadius: BorderRadius.circular(18),
-                    ),
+                    height: 210,
                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: const Color(0xFFEC6545),
+                    ),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Discount\nfor survey",
-                          style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
-                        ),
-                        const Gap(10),
-                        Text(
-                          "Take the survey about our services and get discount",
-                          style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500, color: Colors.white, fontSize: 18),
+                          "Travel is Love",
+                          style: Styles.headLineStyle2.copyWith(color: Colors.white, fontWeight: FontWeight.bold,),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
