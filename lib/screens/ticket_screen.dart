@@ -1,4 +1,7 @@
+import 'package:booktickets/screens/ticket_view.dart';
+import 'package:booktickets/utils/app_info_list.dart';
 import 'package:booktickets/utils/app_layout.dart';
+import 'package:booktickets/widgets/ticket_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -19,6 +22,12 @@ class TicketScreen extends StatelessWidget {
             children: [
               const Gap(40),
               Text("Tickets", style: Styles.headLineStyle1,),
+              const Gap(20),
+              const AppTicketTabs(firstTab: "Upcoming", secondTab: "Previous",),
+              Container(
+                padding: const EdgeInsets.only(left: 15),
+                child: TicketView(ticket: ticketList[0],),
+              )
             ],
           )
         ],
