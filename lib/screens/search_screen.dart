@@ -76,7 +76,7 @@ class SearchScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: 400,
+                height: 450,
                 width: size.width * 0.42,
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 17),
                 decoration: BoxDecoration(
