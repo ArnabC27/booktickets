@@ -116,7 +116,7 @@ class SearchScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width * 0.44,
-                        height: 205,
+                        height: 220,
                         decoration: BoxDecoration(
                           color: const Color(0xFF3AB8B8),
                           borderRadius: BorderRadius.circular(18),
@@ -154,7 +154,7 @@ class SearchScreen extends StatelessWidget {
                   const Gap(15),
                   Container(
                     width: size.width * 0.44,
-                    height: 210,
+                    height: 215,
                     padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
@@ -167,6 +167,24 @@ class SearchScreen extends StatelessWidget {
                           style: Styles.headLineStyle2.copyWith(color: Colors.white, fontWeight: FontWeight.bold,),
                           textAlign: TextAlign.center,
                         ),
+                        const Gap(15),
+                        RichText(
+                            text: const TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "✈️",
+                                  style: TextStyle(fontSize: 30),
+                                ),
+                                TextSpan(
+                                  text: "😍",
+                                  style: TextStyle(fontSize: 40),
+                                ),
+                                TextSpan(
+                                  text: "🏨",
+                                  style: TextStyle(fontSize: 30),
+                                ),
+                              ]
+                            ))
                       ],
                     ),
                   )
