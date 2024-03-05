@@ -6,9 +6,9 @@ import 'package:booktickets/widgets/ticket_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import '../utils/app_styles.dart';
 import '../widgets/layout_builder_widget.dart';
+import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({Key? key}) : super(key: key);
@@ -113,8 +113,9 @@ class TicketScreen extends StatelessWidget {
                   ],
                 )
               ),
-
-
+              BarcodeWidget(
+                  data: 'https://github.com/ArnabC27',
+                  barcode: Barcode.code128(),),
             ],
           )
         ],
