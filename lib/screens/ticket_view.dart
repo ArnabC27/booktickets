@@ -1,4 +1,5 @@
 import 'package:booktickets/utils/app_layout.dart';
+import 'package:booktickets/widgets/column_layout.dart';
 import 'package:booktickets/widgets/thick_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -175,6 +176,10 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      AppColumnLayout(
+                          firstText: ticket['date'],
+                          secondText: "Date",
+                          alignment: CrossAxisAlignment.start),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

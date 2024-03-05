@@ -4,20 +4,24 @@ import 'package:gap/gap.dart';
 import '../utils/app_styles.dart';
 
 class AppColumnLayout extends StatelessWidget {
-  const AppColumnLayout({Key? key}) : super(key: key);
+  final CrossAxisAlignment alignment;
+  final String firstText;
+  final String secondText;
+  const AppColumnLayout({Key? key, required this.firstText, required this.secondText, required this.alignment}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: alignment,
       children: [
         Text(
-          "Arnab C.",
+          firstText,
           style: Styles.headLineStyle3,
         ),
         const Gap(5),
         Text(
-          "Passenger",
-          style: Styles.headLineStyle3,
+          secondText,
+          style: Styles.headLineStyle4,
         ),
       ],
     );

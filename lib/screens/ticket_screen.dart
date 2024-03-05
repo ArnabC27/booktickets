@@ -1,6 +1,7 @@
 import 'package:booktickets/screens/ticket_view.dart';
 import 'package:booktickets/utils/app_info_list.dart';
 import 'package:booktickets/utils/app_layout.dart';
+import 'package:booktickets/widgets/column_layout.dart';
 import 'package:booktickets/widgets/ticket_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -34,22 +35,21 @@ class TicketScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 15.5),
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 color: Colors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          children: [
-                            Text(
-                              "Arnab C.",
-                              style: Styles.headLineStyle3,
-                            ),
-                            Text(
-                              "Passenger",
-                              style: Styles.headLineStyle3,
-                            ),
-                          ],
-                        )
+                        AppColumnLayout(
+                          firstText: "Arnab C.",
+                          secondText: "Passenger",
+                          alignment: CrossAxisAlignment.start,
+                        ),
+                        AppColumnLayout(
+                          firstText: "5221 543498",
+                          secondText: "Passport",
+                          alignment: CrossAxisAlignment.end,
+                        ),
                       ],
                     )
                   ],
