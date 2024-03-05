@@ -58,6 +58,7 @@ class TicketScreen extends StatelessWidget {
                   ],
                 )
               ),
+
             ],
           )
         ],
