@@ -26,6 +26,6 @@ class AppLayoutBuilderWidget extends StatelessWidget {
           )),
         );
       },
-    ),;
+    );
   }
 }
