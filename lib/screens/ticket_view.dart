@@ -170,55 +170,30 @@ class TicketView extends StatelessWidget {
                   bottomRight: Radius.circular(isColor == null ? 21 : 0),
                 ),
               ),
-              padding: const EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
+              padding: const EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 11),
               child: Column(
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppColumnLayout(
-                          firstText: ticket['date'],
-                          secondText: "Date",
-                          alignment: CrossAxisAlignment.start),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "${ticket['date']}",
-                            style: isColor == null ? Styles.headLineStyle3.copyWith(color: Colors.white) : Styles.headLineStyle3,
-                          ),
-                          Text(
-                            "Date",
-                            style: isColor == null ? Styles.headLineStyle4.copyWith(color: Colors.white) : Styles.headLineStyle4,
-                          )
-                        ],
+                        firstText: ticket['date'],
+                        secondText: "Date",
+                        alignment: CrossAxisAlignment.start,
+                        isColor: isColor,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "${ticket['departure_time']}",
-                            style: isColor == null ? Styles.headLineStyle3.copyWith(color: Colors.white) : Styles.headLineStyle3,
-                          ),
-                          Text(
-                            "Departure",
-                            style: isColor == null ? Styles.headLineStyle4.copyWith(color: Colors.white) : Styles.headLineStyle4,
-                          )
-                        ],
+                      AppColumnLayout(
+                        firstText: ticket['departure_time'],
+                        secondText: "Departure",
+                        alignment: CrossAxisAlignment.center,
+                        isColor: isColor,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text(
-                            "${ticket['seat']}",
-                            style: isColor == null ? Styles.headLineStyle3.copyWith(color: Colors.white) : Styles.headLineStyle3,
-                          ),
-                          Text(
-                            "Seat No.",
-                            style: isColor == null ? Styles.headLineStyle4.copyWith(color: Colors.white) : Styles.headLineStyle4,
-                          )
-                        ],
-                      )
+                      AppColumnLayout(
+                        firstText: ticket['seat'].toString(),
+                        secondText: "Seat No.",
+                        alignment: CrossAxisAlignment.end,
+                        isColor: isColor,
+                      ),
                     ],
                   )
                 ],
