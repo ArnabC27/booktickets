@@ -37,9 +37,9 @@ class TicketScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 15.5),
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 color: Colors.white,
-                child: const Column(
+                child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppColumnLayout(
@@ -56,14 +56,14 @@ class TicketScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Gap(20),
-                    AppLayoutBuilderWidget(
+                    const Gap(20),
+                    const AppLayoutBuilderWidget(
                       sections: 15,
                       isColor: false,
                       width: 5,
                     ),
-                    Gap(20),
-                    Row(
+                    const Gap(20),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppColumnLayout(
@@ -80,11 +80,35 @@ class TicketScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Gap(20),
-                    AppLayoutBuilderWidget(
+                    const Gap(20),
+                    const AppLayoutBuilderWidget(
                       sections: 15,
                       isColor: false,
                       width: 5,
+                    ),
+                    const Gap(20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset("assets/images/visa.png", scale: 11,),
+                                Text(" *** 2462", style: Styles.headLineStyle3,),
+                              ],
+                            ),
+                            const Gap(5),
+                            Text("Payment method", style: Styles.headLineStyle4,),
+                          ],
+                        ),
+                        const AppColumnLayout(
+                          firstText: "\u{20B9}${4698.55}",
+                          secondText: "Price",
+                          alignment: CrossAxisAlignment.end,
+                          isColor: true,
+                        ),
+                      ],
                     ),
                   ],
                 )
