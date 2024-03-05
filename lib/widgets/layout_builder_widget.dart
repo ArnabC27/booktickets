@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class AppLayoutBuilderWidget extends StatelessWidget {
   final bool? isColor;
   final int sections;
-  const AppLayoutBuilderWidget({Key? key, this.isColor, required this.sections}) : super(key: key);
+  final double width;
+  const AppLayoutBuilderWidget({Key? key, this.isColor, required this.sections, this.width = 3}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class AppLayoutBuilderWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.max,
           children: List.generate((constraints.constrainWidth()/sections).floor(), (index) => SizedBox(
-            width: 3,
+            width: width,
             height: 1,
             child: DecoratedBox(
               decoration: BoxDecoration(
