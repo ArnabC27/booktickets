@@ -113,9 +113,25 @@ class TicketScreen extends StatelessWidget {
                   ],
                 )
               ),
-              BarcodeWidget(
-                  data: 'https://github.com/ArnabC27',
-                  barcode: Barcode.code128(),),
+              const SizedBox(height: 1,),
+              Container(
+                color: Colors.white,
+                margin: const EdgeInsets.only(left: 15.5, right: 15.5),
+                padding: const EdgeInsets.only(top: 15, bottom: 20),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: BarcodeWidget(
+                      data: 'https://github.com/ArnabC27',
+                      barcode: Barcode.code128(),
+                      color: Styles.textColor,
+                      width: double.infinity,
+                      height: 70,
+                    ),
+                  ),
+                ),
+              ),
             ],
           )
         ],
